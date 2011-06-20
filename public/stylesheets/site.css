@@ -1,0 +1,31 @@
+body {
+  background-color: #6c5e5e;
+  margin: 0; }
+
+.containing, .content {
+  width: 900px;
+  margin: auto; }
+
+.header {
+  padding: 6px 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.3, #3f2b2a), color-stop(1, #564646));
+  background-image: -moz-linear-gradient(center bottom, #3f2b2a 30%, #564646 100%); }
+
+.footer {
+  height: 60px;
+  background-color: #483636; }
+
+.content {
+  padding: 12px;
+  height: 576px;
+  width: 900px;
+  background: url("/images/front1.jpg") center no-repeat; }
+
+.signup {
+  border: 1px solid #6c5e5e;
+  width: 300px;
+  margin: 12px 30px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.6);
+  -moz-border-radius: 12px;
+  border-radius: 12px; }

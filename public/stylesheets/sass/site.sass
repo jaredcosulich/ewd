@@ -1,5 +1,12 @@
+@mixin rounded($radius)
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+$brown: #6C5E5E
+$lightbrown: #483636
+
 body
-  background-color: #6C5E5E
+  background-color: $brown
   margin: 0
 
 .containing, .content
@@ -13,10 +20,18 @@ body
 
 .footer
   height: 60px
-  background-color: #483636
+  background-color: $lightbrown
 
 .content
   padding: 12px
   height: 576px
   width: 900px
   background: url("/images/front1.jpg") center no-repeat
+
+.signup
+  border: 1px solid $brown
+  width: 300px
+  margin: 12px 30px
+  padding: 12px
+  background-color: rgba(255,255,255,0.6)
+  +rounded(12px)
