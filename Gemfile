@@ -1,31 +1,20 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rake'
+gem 'rails', '3.0.5'
+gem 'pg'
+gem 'devise', :git => 'git://github.com/plataformatec/devise', :branch => 'master'
+gem "simple_form", "~> 1.2.2"
+gem "haml"
+gem "sass"
+gem "heroku"
+gem "newrelic_rpm"
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'hoptoad_notifier', '2.3.8'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
 
-# Use unicorn as the web server
-# gem 'unicorn'
+group :development, :test do
+ gem 'rspec-rails'
+ gem 'factory_girl_rails'
+end
 
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
