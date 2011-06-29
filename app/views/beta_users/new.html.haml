@@ -1,6 +1,13 @@
 .signup
   %h2 Exclusive Wedding Deals Membership
   = form_for @beta_user do |f|
+    - if @beta_user.errors.any?
+      .errors
+        %h4 There was a problem saving your registration.
+        %ul
+          - @beta_user.errors.full_messages.each do |msg|
+            %li= msg
+
     %p
       = f.label :name
       = f.text_field :name

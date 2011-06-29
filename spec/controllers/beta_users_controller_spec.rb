@@ -20,6 +20,21 @@ describe BetaUsersController do
       beta_user.wedding_city.should == "San Francisco"
       beta_user.wedding_state.should == "CA"
     end
+
+    it "should render the form on validation failure" do
+      post :create, :beta_user => {
+        :name => "",
+        :email => "",
+        :wedding_date => "",
+        :wedding_city => "",
+        :wedding_state => ""
+      }
+
+      response.should be_success
+      BetaUser.count.should be_zero
+
+      assigns(:beta_user).errors.should_not be_empty
+    end
   end
 
   describe "#new" do
