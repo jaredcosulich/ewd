@@ -10,6 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110629174358) do
+
+  create_table "beta_users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "wedding_date"
+    t.string   "wedding_city"
+    t.string   "wedding_state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
