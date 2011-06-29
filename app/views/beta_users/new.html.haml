@@ -1,0 +1,20 @@
+.signup
+  %h2 Exclusive Wedding Deals Membership
+  = form_for @beta_user do |f|
+    %p
+      = f.label :name
+      = f.text_field :name
+    %p
+      = f.label :email
+      = f.text_field :email
+    %p
+      = f.label :wedding_date
+      = f.text_field :wedding_date
+    %p
+      = f.label :wedding_city
+      = f.text_field :wedding_city
+
+      = f.label :wedding_state
+      = f.text_field :wedding_state
+    %p
+      = f.submit("Sign up")
