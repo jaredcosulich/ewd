@@ -22,16 +22,25 @@ body
   height: 60px
   background-color: $lightbrown
 
-.content
-  padding: 12px
-  height: 576px
+#content
+  height: 600px
   width: 900px
-  background: url("/images/front1.jpg") center no-repeat
+  margin: auto
+  position: relative
 
 .signup
   border: 1px solid $brown
   width: 300px
-  margin: 12px 30px
   padding: 12px
   background-color: rgba(255,255,255,0.6)
   +rounded(12px)
+  position: absolute
+  left: 30px
+  top: 12px
+
+#background-cache
+  height: 1px
+  width: 1px
+  position: absolute
+  top: -1000px
+  left: -1000px
