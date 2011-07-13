@@ -1,5 +1,9 @@
 .signup
-  %h2 Exclusive Wedding Deals Membership
+  %h3 Exclusive Wedding Deals Membership
+  %p
+    Sign up to receive exclusive
+    %br 
+    wedding deals from top vendors.
   = form_for @beta_user do |f|
     - if @beta_user.errors.any?
       .errors
@@ -15,13 +19,13 @@
       = f.label :email
       = f.text_field :email
     %p
-      = f.label :wedding_date
+      = f.label :wedding_date, "Wedding Date"
       = f.text_field :wedding_date
     %p
-      = f.label :wedding_city
-      = f.text_field :wedding_city
-
-      = f.label :wedding_state
-      = f.text_field :wedding_state
+      = f.label :wedding_city, "Wedding City"
+      = f.text_field :wedding_city, :style => "width: 12em"
+      &nbsp;
+      = f.label :wedding_state, "State"
+      = f.text_field :wedding_state, :size => 2
     %p
-      = f.submit("Sign up")
+      = link_to_function("Sign Up", "this.form.submit()", :class => "fancy button")
