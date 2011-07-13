@@ -2,12 +2,39 @@
   -moz-border-radius: $radius
   border-radius: $radius
 
-$brown: #6C5E5E
+$brown: #6B5E5E
 $lightbrown: #483636
 
 body
+  font-family: 'Quattrocento', arial, serif
   background-color: $brown
   margin: 0
+
+h2
+  margin: 0
+  padding: 0
+  font-size: 18pt
+  font-weight: normal
+
+.fancy
+  font-size: 30pt
+  font-family: 'Tangerine', arial, serif
+
+.button
+  +rounded(6px)
+  display: block
+  background-color: $brown
+  color: white
+  padding: 3px 6px
+  text-decoration: none
+  font-weight: normal
+  font-size: 18pt
+  width: 4em
+  margin: auto
+  letter-spacing: 2px
+
+p
+  margin: 6px 0 18px 0
 
 .containing, .content
   width: 900px
@@ -32,11 +59,12 @@ body
   border: 1px solid $brown
   width: 300px
   padding: 12px
-  background-color: rgba(255,255,255,0.6)
+  background-color: rgba(255,255,255,0.85)
   +rounded(12px)
   position: absolute
-  left: 30px
+  left: 12px
   top: 12px
+  text-align: center
 
 #background-cache
   height: 1px
@@ -44,3 +72,4 @@ body
   position: absolute
   top: -1000px
   left: -1000px
+

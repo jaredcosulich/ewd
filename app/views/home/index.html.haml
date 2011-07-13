@@ -1,5 +1,9 @@
 .signup
-  %h2 Exclusive Wedding Deals
-  %p Local Wedding Deals from Top Vendors
+  %h2
+    %span.fancy Exclusive
+    Wedding Deals
   %p
-    = link_to("Sign Up", new_beta_user_path)
+    Local Wedding Deals from
+    %br
+    Top Vendors
+  = link_to("Sign Up", new_beta_user_path, :class => "fancy button")
