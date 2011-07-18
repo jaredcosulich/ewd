@@ -36,10 +36,11 @@
 
   %body
     = render "layouts/header"
-    #content
-      .containing= yield
-      = image_tag("background_photos/bg#{rand(7) + 1}.jpg", :class => "background_image")
-    = render "layouts/footer"
+    #content_container
+      #content.content
+        .containing= yield
+        = image_tag("background_photos/bg#{rand(7) + 1}.jpg", :class => "background_image")
+      = render "layouts/footer"
 
     #background-cache
       - 7.times do |i|

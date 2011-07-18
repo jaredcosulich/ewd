@@ -2,8 +2,8 @@
   -moz-border-radius: $radius
   border-radius: $radius
 
-$brown: #6B5E5E
-$lightbrown: #483636
+$brown: #483636
+$grey: #6B5E5E
 
 body
   font-family: 'Quattrocento', arial, serif
@@ -20,6 +20,9 @@ h3
   margin: 0
   padding: 0
   font-weight: normal
+
+.smallish
+  font-size: 9pt
 
 .fancy
   font-size: 30pt
@@ -49,16 +52,35 @@ p
   padding: 6px 0
   background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.3, rgb(63,43,42)), color-stop(1, rgb(86,70,70)) )
   background-image: -moz-linear-gradient( center bottom, rgb(63,43,42) 30%, rgb(86,70,70) 100% )
+  .brought_by
+    width: 15em
+    float: right
+    margin-top: 36px
+    a
+      text-decoration: none
+      color: white
+    .wm_logo
+      float: left
+    .wm_text
+      padding-top: 9px
+      overflow: hidden
 
 .footer
   height: 60px
-  background-color: $lightbrown
+  background-color: $brown
+  color: white
+  a
+    color: white
+    text-decoration: none
+  .copyright
+    float: right
 
-#content
-  height: 600px
-  width: 900px
-  margin: auto
-  position: relative
+
+#content_container
+  background-color: $grey
+  #content
+    height: 600px
+    position: relative
 
 .signup
   border: 1px solid $brown
@@ -74,6 +96,7 @@ p
 #background-cache
   height: 1px
   width: 1px
+  overflow: hidden
   position: absolute
   top: -1000px
   left: -1000px

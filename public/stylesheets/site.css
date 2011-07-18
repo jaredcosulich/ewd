@@ -1,6 +1,6 @@
 body {
   font-family: "Quattrocento", arial, serif;
-  background-color: #6b5e5e;
+  background-color: #483636;
   margin: 0; }
 
 h2 {
@@ -14,6 +14,9 @@ h3 {
   padding: 0;
   font-weight: normal; }
 
+.smallish {
+  font-size: 9pt; }
+
 .fancy {
   font-size: 30pt;
   font-family: "Tangerine", arial, serif; }
@@ -22,7 +25,7 @@ h3 {
   -moz-border-radius: 6px;
   border-radius: 6px;
   display: block;
-  background-color: #6b5e5e;
+  background-color: #483636;
   color: white;
   padding: 3px 6px;
   text-decoration: none;
@@ -43,19 +46,37 @@ p {
   padding: 6px 0;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.3, #3f2b2a), color-stop(1, #564646));
   background-image: -moz-linear-gradient(center bottom, #3f2b2a 30%, #564646 100%); }
+  .header .brought_by {
+    width: 15em;
+    float: right;
+    margin-top: 36px; }
+    .header .brought_by a {
+      text-decoration: none;
+      color: white; }
+    .header .brought_by .wm_logo {
+      float: left; }
+    .header .brought_by .wm_text {
+      padding-top: 9px;
+      overflow: hidden; }
 
 .footer {
   height: 60px;
-  background-color: #483636; }
+  background-color: #483636;
+  color: white; }
+  .footer a {
+    color: white;
+    text-decoration: none; }
+  .footer .copyright {
+    float: right; }
 
-#content {
-  height: 600px;
-  width: 900px;
-  margin: auto;
-  position: relative; }
+#content_container {
+  background-color: #6b5e5e; }
+  #content_container #content {
+    height: 600px;
+    position: relative; }
 
 .signup {
-  border: 1px solid #6b5e5e;
+  border: 1px solid #483636;
   width: 360px;
   padding: 12px;
   background-color: rgba(255, 255, 255, 0.85);
@@ -69,6 +90,7 @@ p {
 #background-cache {
   height: 1px;
   width: 1px;
+  overflow: hidden;
   position: absolute;
   top: -1000px;
   left: -1000px; }
