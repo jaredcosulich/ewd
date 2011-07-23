@@ -2,6 +2,8 @@ body {
   font-family: "Quattrocento", arial, serif;
   background-color: #483636;
   margin: 0; }
+  body a img {
+    border: none; }
 
 h2 {
   margin: 0;
@@ -62,7 +64,8 @@ p {
 .footer {
   height: 60px;
   background-color: #483636;
-  color: white; }
+  color: white;
+  padding-top: 3px; }
   .footer a {
     color: white;
     text-decoration: none; }
@@ -79,7 +82,8 @@ p {
   border: 1px solid #483636;
   width: 360px;
   padding: 12px;
-  background-color: rgba(255, 255, 255, 0.85);
+  background: white;
+  background: rgba(255, 255, 255, 0.85);
   -moz-border-radius: 12px;
   border-radius: 12px;
   position: absolute;

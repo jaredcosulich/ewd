@@ -39,9 +39,9 @@
     #content_container
       #content.content
         .containing= yield
-        = image_tag("background_photos/bg#{rand(7) + 1}.jpg", :class => "background_image")
+        = image_tag("background_photos/bg#{rand(7) + 1}.jpg", :title => "", :class => "background_image")
       = render "layouts/footer"
 
     #background-cache
       - 7.times do |i|
-        = image_tag("background_photos/bg#{i+1}.jpg", :onload => "queueBackgroundImage(this)")
+        = image_tag("background_photos/bg#{i+1}.jpg", :title => "", :onload => "queueBackgroundImage(this)")
