@@ -28,4 +28,4 @@
       = f.label :wedding_state, "State"
       = f.text_field :wedding_state, :size => 2
     %p
-      = link_to_function("Sign Up", "this.form.submit()", :class => "fancy button")
+      = link_to_function("Sign Up", "$(this).closest('form').submit()", :class => "fancy button")
