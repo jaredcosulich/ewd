@@ -1,6 +1,8 @@
 :javascript
   $(function() {
     $("#signup_button").click(function() {
+      $(this).html("");
+      $(this).append($("#loading"));
       $(this).closest('form').submit()
     })
   })
@@ -36,3 +38,5 @@
       = f.text_field :wedding_state, :size => 2
     %p
       = link_to_function("Sign Up", :class => "fancy button", :id => "signup_button")
+    .hidden
+      = image_tag("ajax-loader.gif", :id => "loading")

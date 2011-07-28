@@ -23,6 +23,14 @@ h3 {
   font-size: 30pt;
   font-family: "Tangerine", arial, serif; }
 
+.hidden {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: -1000px;
+  left: -1000px; }
+
 .button {
   -moz-border-radius: 6px;
   border-radius: 6px;
