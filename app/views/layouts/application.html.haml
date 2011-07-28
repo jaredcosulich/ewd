@@ -45,3 +45,5 @@
     #background-cache
       - 7.times do |i|
         = image_tag("background_photos/bg#{i+1}.jpg", :title => "", :onload => "queueBackgroundImage(this)")
+
+    = render "layouts/analytics"
