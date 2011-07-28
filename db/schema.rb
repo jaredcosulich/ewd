@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110629174358) do
+ActiveRecord::Schema.define(:version => 20110728183158) do
 
   create_table "beta_users", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20110629174358) do
     t.string   "wedding_state"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "wedding_lat",   :precision => 9, :scale => 6
+    t.decimal  "wedding_lng",   :precision => 9, :scale => 6
   end
 
 end
