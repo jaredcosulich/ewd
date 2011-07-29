@@ -12,8 +12,8 @@
     = render "layouts/header"
     #content_container
       #content.content
-        .containing= yield
         = image_tag("background_photos/bg#{rand(7) + 1}.jpg", :title => "", :class => "background_image")
+        .containing= yield
       = render "layouts/footer"
 
     = render "layouts/analytics"
