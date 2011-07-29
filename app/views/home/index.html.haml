@@ -7,3 +7,7 @@
     %br
     wedding professionals.
   = link_to("Sign Up", new_beta_user_path, :class => "fancy button")
+
+#background-cache
+  - 7.times do |i|
+    = image_tag("background_photos/bg#{i+1}.jpg", :title => "", :onload => "queueBackgroundImage(this)")
