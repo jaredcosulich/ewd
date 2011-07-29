@@ -8,32 +8,6 @@
     %link{:href => 'http://fonts.googleapis.com/css?family=Quattrocento&v1', :rel => 'stylesheet', :type => 'text/css'}
     %link{:href => 'http://fonts.googleapis.com/css?family=Tangerine&v1', :rel => 'stylesheet', :type => 'text/css'}
 
-    :javascript
-      window.bgQueue = []
-      function queueBackgroundImage(img) {
-        window.bgQueue.push(img.src);
-      }
-
-      function rotateBackgroundImage() {
-        var contentBackground = $("#content .background_image");
-        if (contentBackground.length == 0) {
-          setTimeout(rotateBackgroundImage, 500);
-          return
-        }
-
-        var currentBackgroundSrc = contentBackground.attr("src");
-        for (var i=0; i<window.bgQueue.length; ++i) {
-          if (window.bgQueue[i].indexOf(currentBackgroundSrc) > -1) {
-            var nextI = i + 1;
-            if (nextI >= window.bgQueue.length) nextI = 1;
-            contentBackground.attr("src", window.bgQueue[nextI]);
-          }
-        }
-        setTimeout(rotateBackgroundImage, 20000);
-      }
-      rotateBackgroundImage();
-
-
   %body
     = render "layouts/header"
     #content_container
@@ -41,9 +15,5 @@
         .containing= yield
         = image_tag("background_photos/bg#{rand(7) + 1}.jpg", :title => "", :class => "background_image")
       = render "layouts/footer"
-
-    #background-cache
-      - 7.times do |i|
-        = image_tag("background_photos/bg#{i+1}.jpg", :title => "", :onload => "queueBackgroundImage(this)")
 
     = render "layouts/analytics"
