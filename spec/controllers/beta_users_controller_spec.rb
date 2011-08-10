@@ -43,4 +43,12 @@ describe BetaUsersController do
       response.should be_success
     end
   end
+
+  describe "#csv" do
+    it "should render all beta users in csv format" do
+      get :csv
+      response.should be_success
+    end
+  end
+
 end

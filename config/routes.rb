@@ -1,5 +1,9 @@
 Ewd::Application.routes.draw do
-  resources :beta_users
+  resources :beta_users do
+    collection do
+      get :csv
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
